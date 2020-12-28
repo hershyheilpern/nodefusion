@@ -7,9 +7,11 @@ var main = require("./main.js");
 
 var cl = console.log;
 if(options.serverproticals.http.on == true){
-httpServer = http.createServer(eval(options.serverproticals.http.app)).listen(options.serverproticals.http.port,options.serverproticals.http.ip||"0.0.0.0")
+httpServer = http.createServer(eval(options.serverproticals.http.app))
+.listen(options.serverproticals.http.port,options.serverproticals.http.ip||"0.0.0.0")
 }
 if(options.serverproticals.https.on == true){
-httpsServer = https.createServer(options.serverproticals.https.options,eval(options.serverproticals.https.app)).listen(options.serverproticals.http.port,options.serverproticals.http.ip||"0.0.0.0")
+httpsServer = https.createServer(options.serverproticals.https.options,eval(options.serverproticals.https.app))
+.listen(options.serverproticals.https.port,options.serverproticals.https.ip||"0.0.0.0")
 }
 
